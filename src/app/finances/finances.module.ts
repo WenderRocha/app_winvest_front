@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -21,7 +22,8 @@ import { HomeComponent } from './home/home.component';
     MatCardModule,
     MatGridListModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    FlexLayoutModule
   ]
 })
 export class FinancesModule { }

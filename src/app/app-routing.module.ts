@@ -5,7 +5,7 @@ const routes: Routes = [
 
   //{path: '', pathMatch: 'full', redirectTo: 'home'},
 
-  { path: 'finances',
+  { path: 'financeiro',
     loadChildren: () => import('./finances/finances.module').then(m => m.FinancesModule)
   }
 

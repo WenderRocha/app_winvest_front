@@ -1,6 +1,6 @@
-<mat-toolbar>
+<mat-toolbar id="toolbar-home">
   <button mat-icon-button class="toolbar-home-icon" aria-label="toolbar-home icon-button with menu icon">
-    <mat-icon>menu</mat-icon>
+    <mat-icon mat-button (click)="drawer.toggle()">menu</mat-icon>
   </button>
   <span>My App</span>
   <span class="toolbar-home-spacer"></span>
@@ -11,3 +11,15 @@
     <mat-icon>share</mat-icon>
   </button>
 </mat-toolbar>
+
+<mat-drawer-container class="home-container" autosize>
+  <mat-drawer #drawer class="home-sidenav" mode="side">
+
+  </mat-drawer>
+
+  <div class="home-sidenav-content">
+    <h1>Content</h1>
+  </div>
+
+</mat-drawer-container>
+

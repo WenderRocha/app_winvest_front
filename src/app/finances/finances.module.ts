@@ -1,8 +1,12 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatIconModule } from '@angular/material/icon';
 
-import { FinancesRoutingModule } from './finances-routing.module';
 import { AccountsComponent } from './accounts/accounts.component';
+import { FinancesRoutingModule } from './finances-routing.module';
 import { HomeComponent } from './home/home.component';
 
 
@@ -13,7 +17,11 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     CommonModule,
-    FinancesRoutingModule
+    FinancesRoutingModule,
+    MatCardModule,
+    MatGridListModule,
+    MatIconModule,
+    MatButtonModule
   ]
 })
 export class FinancesModule { }

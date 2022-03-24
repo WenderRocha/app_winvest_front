@@ -1,5 +1,6 @@
 #toolbar-home {
   height: 10%;
+  background-color: #424242;
 }
 .toolbar-home-spacer {
   flex: 1 1 auto;
@@ -8,7 +9,6 @@
 .home-container {
   width: 100%;
   height: 90%;
-  border: 1px solid rgba(0, 0, 0, 0.5);
 }
 
 .home-sidenav {
@@ -17,7 +17,59 @@
 }
 
 .home-sidenav-content {
- max-width: 95%;
- margin: 0 auto;
- height: 90%;
+  max-width: 95%;
+  margin: 0 auto;
+  height: 90%;
+}
+
+/*sidenav*/
+.nav-container {
+  height: 90%;
+}
+.sidenav {
+  width: 15rem;
+}
+.mat-item {
+  font-size: 15px;
+}
+.icon-nav {
+  margin-right: 15px;
+}
+.nav-profile-img {
+  padding: 0 16px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.profile-img {
+  border-radius: 100%;
+  width: 80px;
+  max-width: 100%;
+}
+
+.nav-profile-checked-mark {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  top: 0;
+  right: 70px;
+}
+
+.nav-profile-name {
+  margin-top: 15px;
+}
+/*sidenav*/
+
+.icon-premium {
+  color: #69f0ae;
+}
+
+button.mat-menu-item {
+  display: flex;
+  align-items: center;
 }

@@ -1,26 +1,130 @@
 <mat-toolbar id="toolbar-home">
-  <button mat-icon-button class="toolbar-home-icon" aria-label="toolbar-home icon-button with menu icon">
+  <button
+    mat-icon-button
+    class="toolbar-home-icon"
+    aria-label="toolbar-home icon-button with menu icon"
+  >
     <mat-icon mat-button (click)="drawer.toggle()">menu</mat-icon>
   </button>
   <span>My App</span>
   <span class="toolbar-home-spacer"></span>
-  <button mat-icon-button class="toolbar-home-icon favorite-icon" aria-label="toolbar-home icon-button with heart icon">
-    <mat-icon>favorite</mat-icon>
+
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>account_circle</mat-icon>
   </button>
-  <button mat-icon-button class="toolbar-home-icon" aria-label="toolbar-home icon-button with share icon">
-    <mat-icon>share</mat-icon>
-  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item>Minha Conta</button>
+    <button mat-menu-item>
+      <i class="material-icons icon-nav">logout</i>
+      Sair
+    </button>
+  </mat-menu>
 </mat-toolbar>
 
 <mat-drawer-container class="home-container" autosize>
   <mat-drawer #drawer class="home-sidenav" mode="side">
+    <mat-nav-list class="nav-list">
+      <div class="nav-profile-img">
+        <img
+          class="profile-img"
+          src="assets/img/profile/profile.jpg"
+          alt="imagem de perfil do usuário"
+        />
 
+        <img
+          class="nav-profile-checked-mark"
+          src="assets/img/checked-mark.svg"
+          alt="icone de usuário premium"
+          title="Premium"
+        />
+        <div class="nav-profile-name">Wender Rocha</div>
+      </div>
+
+      <a class="mat-item" mat-list-item routerLink="/home">
+        <i class="material-icons icon-nav">home</i>
+        Dashboard
+      </a>
+
+      <a class="mat-item" mat-list-item routerLink="financeiro/contas">
+        <i class="material-icons icon-nav">account_balance</i>
+        Contas
+      </a>
+
+      <a class="mat-item" [matMenuTriggerFor]="menuFinance" mat-list-item>
+        <i class="material-icons icon-nav">paid</i>
+        Financeiro
+
+        <mat-menu
+          class="mat-elevation-z8"
+          #menuFinance="matMenu"
+          yPosition="above"
+        >
+          <button mat-menu-item routerLink="financeiro/lancamentos">
+            <i class="material-icons icon-nav">visibility</i>
+            <span>Visão Geral</span>
+          </button>
+
+          <button mat-menu-item routerLink="financeiro/lancamentos">
+            <i class="material-icons icon-nav">payments</i>
+            <span>Lançamentos</span>
+          </button>
+
+          <button mat-menu-item>
+            <i class="material-icons icon-nav">grid_view</i>
+            <span>Categorias</span>
+          </button>
+
+          <button mat-menu-item>
+            <i class="material-icons icon-nav">description</i>
+            <span>Relatórios</span>
+          </button>
+        </mat-menu>
+      </a>
+
+      <a class="mat-item" [matMenuTriggerFor]="menuTrade" mat-list-item>
+        <i class="material-icons icon-nav">bar_chart</i>
+        Opções Binárias
+
+        <mat-menu
+          class="mat-elevation-z8"
+          #menuTrade="matMenu"
+          xPosition="after"
+        >
+          <button mat-menu-item>
+            <i class="material-icons icon-nav">query_stats</i>
+            <span>Gerênciamento</span>
+          </button>
+
+          <button mat-menu-item>
+            <i class="material-icons icon-nav">payments</i>
+            <span>Transações</span>
+          </button>
+
+          <button mat-menu-item>
+            <i class="material-icons icon-nav">menu_book</i>
+            Book trade
+          </button>
+
+          <button mat-menu-item>
+            <i class="material-icons icon-nav">price_change</i>
+            <span>Trades</span>
+          </button>
+
+          <button mat-menu-item>
+            <i class="material-icons icon-nav">handyman</i>
+            <span>Ferramentas</span>
+          </button>
+        </mat-menu>
+      </a>
+
+      <a class="mat-item icon-premium" mat-list-item routerLink="/">
+        <i class="material-icons icon-nav" color="accent">person_pin</i>
+        GO PREMIUM
+      </a>
+    </mat-nav-list>
   </mat-drawer>
 
   <div class="home-sidenav-content">
     <router-outlet></router-outlet>
   </div>
-
 </mat-drawer-container>
-
-

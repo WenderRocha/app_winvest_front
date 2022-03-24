@@ -4,76 +4,33 @@
   </mat-card-title>
 
   <mat-card-content>
-
     <div fxLayout="row wrap" fxLayoutGap="16px grid">
-      <div fxFlex="25%" fxFlex.xs="100%" fxFlex.gt-sm="33%" *ngFor="let num of [1,2,3]">
+      <div
+        fxFlex="25%"
+        fxFlex.xs="100%"
+        fxFlex.gt-sm="33%"
+        *ngFor="let num of [1, 2, 3]"
+      >
         <mat-card class="account-card mat-elevation-z8">
           <div class="icon-account">
-            <img class="icon-account-img" src="../../../assets/img/accounts_logo/intermedium.png" alt="">
+            <img
+              class="icon-account-img"
+              src="../../../assets/img/accounts_logo/intermedium.png"
+              alt=""
+            />
           </div>
           <span class="balance">R$ 0,00</span>
           <span class="account-name">IQ Option</span>
         </mat-card>
-
-
       </div>
 
       <div fxFlex.xs="100" fxFlex.gt-sm="33">
         <mat-card class="account-card account-card-default">
-          <button mat-button color="basic"> <i class="material-icons icon-nav">add</i> Nova conta</button>
+          <button mat-button color="basic">
+            <i class="material-icons icon-nav">add</i> Nova conta
+          </button>
         </mat-card>
       </div>
-
-
     </div>
-
-
-    <!--<mat-grid-list cols="3" rowHeight="200px">
-      <mat-grid-tile>
-        <mat-card class="account-card mat-elevation-z8">
-          <div class="icon-account">
-            <i class="material-icons icon-nav">account_balance_wallet</i>
-          </div>
-          <span class="balance">R$ 0,00</span>
-          <span class="account-name">Quotex</span>
-        </mat-card>
-      </mat-grid-tile>
-
-      <mat-grid-tile>
-        <mat-card class="account-card mat-elevation-z8">
-          <div class="icon-account">
-            <img class="icon-account-img" src="../../../assets/img/accounts_logo/iqoption-1.png" alt="">
-          </div>
-          <span class="balance">R$ 0,00</span>
-          <span class="account-name">IQ Option</span>
-        </mat-card>
-      </mat-grid-tile>
-
-      <mat-grid-tile>
-        <mat-card class="account-card mat-elevation-z8">
-          <div class="icon-account">
-            <img class="icon-account-img" src="../../../assets/img/accounts_logo/quotex.png" alt="">
-          </div>
-          <span class="balance">R$ 0,00</span>
-          <span class="account-name">Quotex</span>
-        </mat-card>
-      </mat-grid-tile>
-
-      <mat-grid-tile>
-        <mat-card class="account-card mat-elevation-z8">
-          <div class="icon-account">
-            <img class="icon-account-img" src="../../../assets/img/accounts_logo/nuconta.png" alt="">
-          </div>
-          <span class="balance">R$ 0,00</span>
-          <span class="account-name">Nubank</span>
-        </mat-card>
-      </mat-grid-tile>
-
-      <mat-grid-tile>
-        <mat-card class="account-card account-card-default">
-          <button mat-button color="basic"> <i class="material-icons icon-nav">add</i> Nova conta</button>
-        </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>-->
   </mat-card-content>
 </mat-card>

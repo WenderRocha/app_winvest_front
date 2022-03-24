@@ -1,0 +1,65 @@
+<mat-card>
+
+  <div class="mat-elevation-z8">
+
+    <mat-toolbar color="disabled">
+      <span>Lançamentos</span>
+    </mat-toolbar>
+
+    <table mat-table [dataSource]="transactions">
+      <!-- Name Date -->
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>Data</th>
+        <td mat-cell *matCellDef="let transaction">{{ transaction.date }}</td>
+      </ng-container>
+
+      <!-- Description -->
+      <ng-container matColumnDef="description">
+        <th mat-header-cell *matHeaderCellDef>Descrição</th>
+        <td mat-cell *matCellDef="let transaction">
+          {{ transaction.description }}
+        </td>
+      </ng-container>
+
+      <!-- Type -->
+      <ng-container matColumnDef="type">
+        <th mat-header-cell *matHeaderCellDef>Tipo</th>
+        <td mat-cell *matCellDef="let transaction">{{ transaction.type }}</td>
+      </ng-container>
+
+      <!-- Value -->
+      <ng-container matColumnDef="value">
+        <th mat-header-cell *matHeaderCellDef>Valor</th>
+        <td mat-cell *matCellDef="let transaction">{{ transaction.value }}</td>
+      </ng-container>
+
+      <!-- Account -->
+      <ng-container matColumnDef="account">
+        <th mat-header-cell *matHeaderCellDef>Conta</th>
+        <td mat-cell *matCellDef="let transaction">{{ transaction.account }}</td>
+      </ng-container>
+
+      <!-- Category -->
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef>Categoria</th>
+        <td mat-cell *matCellDef="let transaction">
+          <div class="category-icon">
+            <i class="material-icons icon-nav">bar_chart</i>
+          </div>
+        </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons
+      aria-label="Select page of periodic elements"
+    >
+    </mat-paginator>
+  </div>
+</mat-card>
+
+

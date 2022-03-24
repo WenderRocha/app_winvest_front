@@ -1,29 +1,25 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
-import { MatGridListModule } from '@angular/material/grid-list';
-import { MatIconModule } from '@angular/material/icon';
 
+import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FinancesRoutingModule } from './finances-routing.module';
 import { HomeComponent } from './home/home.component';
+import { TransactionsComponent } from './transactions/transactions.component';
 
 
 @NgModule({
   declarations: [
     AccountsComponent,
-    HomeComponent
+    HomeComponent,
+    TransactionsComponent
   ],
   imports: [
     CommonModule,
     FinancesRoutingModule,
-    MatCardModule,
-    MatGridListModule,
-    MatIconModule,
-    MatButtonModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    AppMaterialModule
   ]
 })
 export class FinancesModule { }

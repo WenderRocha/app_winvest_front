@@ -76,7 +76,7 @@ mat-toolbar{
   margin-bottom: 15px;
 }
 .account-list{
-  width: 50%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,8 +98,8 @@ mat-toolbar{
 }
 
 .icon-account-img {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 100%;
 }
 

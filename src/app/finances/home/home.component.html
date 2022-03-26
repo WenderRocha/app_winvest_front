@@ -1,1 +1,133 @@
-<p>home works!</p>
+<mat-card class="card-home-finances">
+  <div class="header">
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="100%" fxFlex.xs="100%" fxFlex.gt-sm="33%">
+        <div class="info-profile">
+          <div>
+            <p class="title-label ng-binding">Boa noite,</p>
+            <p class="name-label">Wender</p>
+          </div>
+
+          <div class="align-icon-balance">
+            <img src="../../../assets/img/icons/night-86826ebd46.png" alt="" />
+          </div>
+        </div>
+
+        <div class="info-amount">
+          <div>
+            <p>Receita Mensal</p>
+            <span class="info-amount-value accent-color">R$ 78,00</span>
+          </div>
+
+          <div>
+            <p>Despesa Mensal</p>
+            <span class="info-amount-value warn-color">R$ 78,00</span>
+          </div>
+        </div>
+      </div>
+
+      <div fxFlex="100%" fxFlex.xs="100%" fxFlex.gt-sm="33%">
+        <div class="balance-area">
+          <div>
+            <p class="text-center">Saldo geral</p>
+            <p>R$ <strong class="balance-value">1.058,00 </strong></p>
+          </div>
+
+          <div class="align-icon-balance">
+            <i class="material-icons icon-nav" color="accent">visibility_off</i>
+          </div>
+        </div>
+
+        <div class="btn-open-charts">
+          <button mat-button>
+            <i class="material-icons icon-nav" color="accent">query_stats</i>
+            Ver relatórios
+          </button>
+        </div>
+      </div>
+
+      <div fxFlex="100%" fxFlex.xs="100%" fxFlex.gt-sm="33%">
+        <p class="text-center">Acesso Rápido</p>
+
+        <div class="flex-container">
+          <div class="button-container">
+            <button
+              mat-mini-fab
+              color="warn"
+              aria-label="Example icon button with a home icon"
+            >
+              <i class="material-icons icon-nav" color="accent">remove</i>
+            </button>
+            <p>Despesa</p>
+          </div>
+
+          <div class="button-container">
+            <button
+              mat-mini-fab
+              color="accent"
+              aria-label="Example icon button with a bookmark icon"
+            >
+              <i class="material-icons icon-nav" color="accent">add</i>
+            </button>
+            <p>Receita</p>
+          </div>
+
+          <div class="button-container">
+            <button
+              mat-mini-fab
+              color="primary"
+              aria-label="Example icon button with a delete icon"
+            >
+              <i class="material-icons icon-nav" color="accent"
+                >multiple_stop</i
+              >
+            </button>
+            <p>Transf.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</mat-card>
+
+<div class="section-accounts">
+  <mat-card>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div fxFlex="100%" fxFlex.xs="100%" fxFlex.gt-sm="50%">
+
+        <mat-toolbar class="transactions-toolbar">
+          <span>Minhas contas</span>
+        </mat-toolbar>
+        <mat-list role="list">
+          <mat-list-item class="account-list-item" role="listitem">
+            <div class="account-list">
+              <span class="account-name">
+                <img class="icon-account-img" src="../../../assets/img/accounts_logo/quotex.png" alt="">
+                Quotex
+              </span>
+              <span class="account-balance">1.058,00</span>
+            </div>
+          </mat-list-item>
+
+          <mat-list-item role="listitem">
+            <div class="account-list">
+              <span class="account-name">
+                <img class="icon-account-img" src="../../../assets/img/accounts_logo/nuconta.png" alt="">
+                Nubank
+              </span>
+              <span class="account-balance">1.058,00</span>
+            </div>
+          </mat-list-item>
+
+        </mat-list>
+      </div>
+
+      <div fxFlex="100%" fxFlex.xs="100%" fxFlex.gt-sm="50%">
+        <mat-toolbar class="transactions-toolbar">
+          <span>Balanço do mês</span>
+        </mat-toolbar>
+
+      </div>
+    </div>
+  </mat-card>
+</div>

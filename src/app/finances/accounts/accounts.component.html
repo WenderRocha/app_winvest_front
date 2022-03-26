@@ -12,6 +12,22 @@
         *ngFor="let num of [1, 2, 3]"
       >
         <mat-card class="account-card mat-elevation-z8">
+          <div class="account-menu">
+            <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>
+                <span>Ver lançamentos</span>
+              </button>
+              <button mat-menu-item>
+                <span>Editar</span>
+              </button>
+              <button mat-menu-item>
+                <span>Excluir</span>
+              </button>
+            </mat-menu>
+          </div>
           <div class="icon-account">
             <img
               class="icon-account-img"
@@ -19,8 +35,12 @@
               alt=""
             />
           </div>
-          <span class="balance accent-color">R$ 0,00</span>
+          <span class="balance accent-color">R$ 1.058,00</span>
           <span class="account-name">IQ Option</span>
+
+          <mat-card-actions>
+            <button mat-button>Detalhes da conta</button>
+          </mat-card-actions>
         </mat-card>
       </div>
 

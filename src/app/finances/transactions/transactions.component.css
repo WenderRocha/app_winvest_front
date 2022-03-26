@@ -12,3 +12,7 @@ table {
   height: 24px;
   border-radius: 100%;
 }
+
+.transactions-toolbar{
+  background-color: #424242;
+}

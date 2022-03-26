@@ -48,3 +48,7 @@ mat-card-content {
 mat-card-actions{
   margin-top: 10px;
 }
+
+.accounts-toolbar{
+  background-color: #424242;
+}
